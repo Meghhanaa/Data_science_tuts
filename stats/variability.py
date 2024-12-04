@@ -67,3 +67,13 @@ print("standard deviation: ") # A ka sd kam hai
 print(sd1, sd2)
 print("variance: ") # A ka variance kam hai issko hi choose karenge
 print(v1,v2)
+
+data = pd.read_csv("/data-analytics/titanic.csv")
+print(data.head)
+
+print(data["Age"].var())
+print(data["Age"].std())
+sns.histplot(x="Age", data=data, edgecolor = "black") #last last me data bahut kam hota jaa rha haii, isska mtlb h ki spreadness kaafi jyda haii 
+# plt.show()
+
+print(data.describe())
