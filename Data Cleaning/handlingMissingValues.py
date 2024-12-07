@@ -57,3 +57,4 @@ for i in data:
     data.fillna(x, inplace  = True)
     
 data.isnull().sum() #saare columns ki null values gauab ho gayiii
+
