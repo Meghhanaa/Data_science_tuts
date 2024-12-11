@@ -52,3 +52,11 @@ oe = OrdinalEncoder(categories=ord_data)
 df2["size_encoded"] = oe.fit_transform(df2[["size"]])  # Encode the 'size' column
 print("Encoded DataFrame:")
 print(df2)
+
+
+#ordinal encoding using the mapping
+ord_Data1 = {"s":0,"m":1,"l":2,"xl":3} #hum yahn pr koi bhi random no. de skte haii jo bhi chahiye, bass yaad rkhe rhna haii
+df2["size_En_map"]=df2["size"].map(ord_Data1)
+print(df2)
+
+
