@@ -57,3 +57,20 @@ sns.boxplot(x="CoapplicantIncome", data=new_data)
 
 # Show the plot
 plt.show()
+
+
+#removing outliers using z-score or normal distribution, 
+
+minr1 = data["CoapplicantIncome"].mean() - 3*data["CoapplicantIncome"].std()
+maxr2 = data["CoapplicantIncome"].mean() + 3*data["CoapplicantIncome"].std()
+maxr2 , minr1
+
+new_data2 = data[data["CoapplicantIncome"] <= maxr2] 
+sns.boxplot(x="CoapplicantIncome", data=new_data2)
+zscore = (data["CoapplicantIncome"] - data["CoapplicantIncome"].mean())/(data["CoapplicantIncome"].std())
+zscore
+zscore>3
+data["zscore"] = zscore
+data.head(3)
+
+data[data["zscore"]<3] #yhan pr outlier hat gaye haii, pahle aur baad me data me changes aa gaye hai 
