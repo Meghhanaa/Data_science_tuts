@@ -18,6 +18,8 @@ from sklearn.linear_model import LogisticRegression
 lr = LogisticRegression()  # Ensure convergence with enough iterations
 
 # Apply Sequential Feature Selector
+
+#feature selection -> forward elimination 
 fs = SequentialFeatureSelector(estimator=lr, k_features=2, forward=True)
 fs = fs.fit(x, y)
 
