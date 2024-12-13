@@ -55,5 +55,4 @@ plt.legend(["original data","predicted line"])
 plt.savefig("predict.jpg") #yeh graph as a jpg format me hmare system me save ho jayegiiii
 plt.show()
 
-
 #hume yehi kosish krna hai ki jyda se jyda accuracy aaye, kyuki jitni jyda accuracy utna achhha hmara answer predict hokr aayega,
