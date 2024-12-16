@@ -103,3 +103,35 @@ lr.score(x_test,y_test) #issme toh aur jyda kam hogya hmari accuracy
 
 
 #LOGISTIC REGREESSION IN MULTICLASS - CLASSIFICATION
+
+
+dataset = pd.read_csv("D:\data-analytics\Iris.csv")
+dataset.head(5)
+dataset["Species"].unique()
+
+sns.pairplot(data=dataset, hue = "Species")
+
+#in saare graph se hme features selectionn krne ki knowledge mil skti hai
+x = dataset.iloc[:,:-1]
+y = dataset["Species"]
+
+x_train1, x_test1 , y_train1, y_test1 = train_test_split(x,y,test_size=0.2, random_state=42)
+from sklearn.linear_model import LogisticRegression 
+
+#ovr method
+lr2 = LogisticRegression(multi_class="ovr")
+lr2.fit(x_train1,y_train1)
+lr2.score(x_test1,y_test1)*100 #100% accuracy using ovr method
+
+#multinomial
+
+lr3 = LogisticRegression(multi_class="multinomial")
+lr3.fit(x_train1,y_train1)
+lr3.score(x_test1,y_test1)*100 #100% accuracy using ovr method
+
+
+#auto
+lr4 = LogisticRegression(multi_class="auto")
+# lr4 = LogisticRegression() => hum aisa bhi use kr skte hai, yhan pr bhi yeh auto hi hoga aur same result aayega
+lr4.fit(x_train1,y_train1)
+lr4.score(x_test1,y_test1)*100 #100% accuracy using ovr method
