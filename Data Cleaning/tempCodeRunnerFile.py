@@ -1,0 +1,1 @@
+en_data = data[["Gender", "Married"]]
