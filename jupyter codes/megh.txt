@@ -1,1 +1,3 @@
 Hey, this is Meghana Tamrakar learning the data science from scratch
+
+#x ke ander do values thi, age=> x[0] and estimated salary => x[1], issme sabse pahle hm dekhe toh x[0] ko liya hai yaani age ko , jiski entropy ya gini index kam rahi hoge x[1] ke comparision me , aur yhan 320 samples par work kiya gaya hai, mtlb ki usme se 205 ek values honge and 115 ek values honge

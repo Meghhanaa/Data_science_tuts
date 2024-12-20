@@ -61,3 +61,6 @@ plt.title("After scaling")
 sns.distplot(data["mm_CoapplicantIncome"])
 
 plt.show()
+
+
+

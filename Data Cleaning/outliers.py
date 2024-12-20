@@ -74,3 +74,4 @@ data["zscore"] = zscore
 data.head(3)
 
 data[data["zscore"]<3] #yhan pr outlier hat gaye haii, pahle aur baad me data me changes aa gaye hai 
+
